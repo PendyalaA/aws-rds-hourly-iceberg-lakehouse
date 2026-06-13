@@ -53,3 +53,15 @@ output "stepfunctions_role_arn" {
 output "eventbridge_scheduler_role_arn" {
   value = module.iam.eventbridge_scheduler_role_arn
 }
+
+output "pipeline_alert_topic_arn" {
+  value = module.monitoring.pipeline_alert_topic_arn
+}
+
+output "pipeline_alert_topic_name" {
+  value = module.monitoring.pipeline_alert_topic_name
+}
+
+output "cloudwatch_log_group_names" {
+  value = module.monitoring.cloudwatch_log_group_names
+}
