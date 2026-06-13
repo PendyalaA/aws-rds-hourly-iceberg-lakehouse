@@ -36,3 +36,12 @@ module "iam" {
   watermark_table_arn      = module.dynamodb.watermark_table_arn
   pipeline_audit_table_arn = module.dynamodb.pipeline_audit_table_arn
 }
+
+module "monitoring" {
+  source = "../../modules/monitoring"
+
+  project_name       = var.project_name
+  environment        = var.environment
+  alert_email        = var.alert_email
+  log_retention_days = 14
+}

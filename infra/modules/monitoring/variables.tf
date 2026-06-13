@@ -1,23 +1,20 @@
-variable "aws_region" {
-  description = "AWS region"
-  type        = string
-  default     = "af-south-1"
-}
-
 variable "project_name" {
   description = "Project name"
   type        = string
-  default     = "aws-rds-hourly-iceberg-lakehouse"
 }
 
 variable "environment" {
   description = "Environment name"
   type        = string
-  default     = "dev"
 }
 
 variable "alert_email" {
   description = "Email address for pipeline alerts"
   type        = string
-  default     = "pendyalababu9@gmail.com"
+}
+
+variable "log_retention_days" {
+  description = "CloudWatch log retention in days"
+  type        = number
+  default     = 14
 }
