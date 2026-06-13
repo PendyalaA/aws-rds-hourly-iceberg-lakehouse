@@ -37,3 +37,19 @@ output "pipeline_audit_table_name" {
 output "pipeline_audit_table_arn" {
   value = module.dynamodb.pipeline_audit_table_arn
 }
+
+output "lambda_extractor_role_arn" {
+  value = module.iam.lambda_extractor_role_arn
+}
+
+output "glue_job_role_arn" {
+  value = module.iam.glue_job_role_arn
+}
+
+output "stepfunctions_role_arn" {
+  value = module.iam.stepfunctions_role_arn
+}
+
+output "eventbridge_scheduler_role_arn" {
+  value = module.iam.eventbridge_scheduler_role_arn
+}
