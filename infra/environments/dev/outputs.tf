@@ -21,3 +21,19 @@ output "data_lake_bucket_name" {
 output "data_lake_bucket_arn" {
   value = module.s3.bucket_arn
 }
+
+output "watermark_table_name" {
+  value = module.dynamodb.watermark_table_name
+}
+
+output "watermark_table_arn" {
+  value = module.dynamodb.watermark_table_arn
+}
+
+output "pipeline_audit_table_name" {
+  value = module.dynamodb.pipeline_audit_table_name
+}
+
+output "pipeline_audit_table_arn" {
+  value = module.dynamodb.pipeline_audit_table_arn
+}
