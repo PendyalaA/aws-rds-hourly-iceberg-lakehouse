@@ -24,3 +24,15 @@ module "dynamodb" {
   project_name = var.project_name
   environment  = var.environment
 }
+
+module "iam" {
+  source = "../../modules/iam"
+
+  project_name             = var.project_name
+  environment              = var.environment
+  data_lake_bucket_name    = module.s3.bucket_name
+  data_lake_bucket_arn     = module.s3.bucket_arn
+  kms_key_arn              = module.kms.kms_key_arn
+  watermark_table_arn      = module.dynamodb.watermark_table_arn
+  pipeline_audit_table_arn = module.dynamodb.pipeline_audit_table_arn
+}
