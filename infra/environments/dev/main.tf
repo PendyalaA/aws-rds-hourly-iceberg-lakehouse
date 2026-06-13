@@ -17,3 +17,10 @@ module "s3" {
   kms_key_arn   = module.kms.kms_key_arn
   force_destroy = true
 }
+
+module "dynamodb" {
+  source = "../../modules/dynamodb"
+
+  project_name = var.project_name
+  environment  = var.environment
+}
