@@ -1,0 +1,32 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+terraform.tfvars.json
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# VS Code
+.vscode/
+
+# Local data
+sample_data/*.csv
+sample_data/*.json
+sample_data/*.zip
+
+# OS
+.DS_Store
+Thumbs.db
