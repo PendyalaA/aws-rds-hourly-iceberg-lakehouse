@@ -85,3 +85,23 @@ output "compute_security_group_id" {
 output "rds_security_group_id" {
   value = module.vpc.rds_security_group_id
 }
+
+output "db_secret_name" {
+  value = module.secrets.db_secret_name
+}
+
+output "db_secret_arn" {
+  value = module.secrets.db_secret_arn
+}
+
+output "db_username" {
+  value = module.secrets.db_username
+}
+
+output "db_name" {
+  value = module.secrets.db_name
+}
+
+output "db_port" {
+  value = module.secrets.db_port
+}
