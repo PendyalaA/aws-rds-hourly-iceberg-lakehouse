@@ -52,3 +52,11 @@ module "vpc" {
   project_name = var.project_name
   environment  = var.environment
 }
+
+module "secrets" {
+  source = "../../modules/secrets"
+
+  project_name = var.project_name
+  environment  = var.environment
+  kms_key_arn  = module.kms.kms_key_arn
+}
