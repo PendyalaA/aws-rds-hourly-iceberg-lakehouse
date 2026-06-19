@@ -45,3 +45,10 @@ module "monitoring" {
   alert_email        = var.alert_email
   log_retention_days = 14
 }
+
+module "vpc" {
+  source = "../../modules/vpc"
+
+  project_name = var.project_name
+  environment  = var.environment
+}
