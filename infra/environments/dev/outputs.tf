@@ -65,3 +65,23 @@ output "pipeline_alert_topic_name" {
 output "cloudwatch_log_group_names" {
   value = module.monitoring.cloudwatch_log_group_names
 }
+
+output "vpc_id" {
+  value = module.vpc.vpc_id
+}
+
+output "private_subnet_ids" {
+  value = module.vpc.private_subnet_ids
+}
+
+output "public_subnet_ids" {
+  value = module.vpc.public_subnet_ids
+}
+
+output "compute_security_group_id" {
+  value = module.vpc.compute_security_group_id
+}
+
+output "rds_security_group_id" {
+  value = module.vpc.rds_security_group_id
+}
